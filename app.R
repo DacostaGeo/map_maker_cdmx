@@ -1,18 +1,14 @@
 
 ##Lista de paquetes que se necesitan
-packages = c("shiny","DT","data.table","sf",
-             "tidyverse","viridis","scales","ggspatial")
-
-## Instalar y/o cargar paquetes
-package.check <- lapply(
-  packages,
-  FUN = function(x) {
-    if (!require(x, character.only = TRUE)) {
-      install.packages(x, dependencies = TRUE)
-      library(x, character.only = TRUE)
-    }
-  }
-)
+# Paquetes
+library(shiny)
+library(DT)
+library(data.table)
+library(sf)
+library(tidyverse)
+library(viridis)
+library(scales)
+library(ggspatial)
 
 rm(list=ls())
 #setwd("F:\\repositorio\\shynyapp\\map_maker_cdmx")
